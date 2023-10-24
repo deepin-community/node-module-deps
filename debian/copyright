@@ -1,22 +1,52 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: module-deps
+Upstream-Contact: https://github.com/substack/module-deps/issues
+Source: https://github.com/substack/module-deps
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+Copyright: 2013-2019 James Halliday <mail@substack.net> (http://substack.net)
+ 2013-2017, Andres Suarez <zertosh@gmail.com>
+ 2013-2017, Ben Drucker <bvdrucker@gmail.com>
+ 2013-2017, Chad Hietala <chadhietala@gmail.com>
+ 2013-2017, Dominic Tarr <dominic.tarr@gmail.com>
+ 2013-2017, Greg Smith <smr.kyu@gmail.com>
+ 2013-2017, James Pike <jpike@chilon.net>
+ 2013-2017, Jared Hanson <jaredhanson@gmail.com>
+ 2013-2017, Jesse McCarthy <git_commits@jessemccarthy.net>
+ 2013-2017, Joris van der Wel <joris@jorisvanderwel.com>
+ 2013-2017, Martin Heidegger <martin.heidegger@gmail.com>
+ 2013-2017, Michael Williams <michael.williams@enspiral.com>
+ 2013-2017, Nicholas Lindley <me@thisoneplace.com>
+ 2013-2017, Patrick Mowrer <pmowrer@gmail.com>
+ 2013-2017, Maxime Liron <maximeliron@gmail.com>
+License: Expat
+Comment: The upstream distribution does not contain an explicit statement of
+ copyright ownership. Pursuant to the Berne Convention for the Protection of
+ Literary and Artistic Works, it is assumed that all content is copyright by
+ its respective authors unless otherwise stated.
+
+Files: debian/*
+Copyright: 2017 Bastien Roucariès <rouca@debian.org>
+ 2020 Yadd <yadd@debian.org>
+License: Expat
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge,
+ publish, distribute, sublicense, and/or sell copies of the Software,
+ and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.

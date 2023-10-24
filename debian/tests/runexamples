@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /usr/share/doc/node-module-deps/examples || exit 77
+module-deps /usr/share/doc/node-module-deps/examples/files/main.js
