@@ -1,5 +1,83 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-module-deps (6.2.3-3) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
+  * Fix test for tap >= 15 (--no-cov) (Closes: #1009565)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Yadd <yadd@debian.org>  Tue, 19 Apr 2022 08:19:20 +0200
+
+node-module-deps (6.2.3-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on node-cached-path-relative,
+      node-concat-stream, node-resolve, node-tap and node-through2.
+    + node-module-deps: Drop versioned constraint on node-concat-stream,
+      node-resolve and node-through2 in Depends.
+
+  [ Yadd ]
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix GitHub tags regex
+  * Fix filenamemangle
+  * Update dependency to nodejs => nodejs:any
+
+ -- Yadd <yadd@debian.org>  Tue, 09 Nov 2021 17:21:36 +0100
+
+node-module-deps (6.2.3-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Modernize debian/watch
+  * Use dh-sequence-nodejs
+  * New upstream version 6.2.3
+  * Remove patch and add dependency to node-readable-stream
+  * Mark test dependencies with <!nocheck>
+  * Update autopkgtest to run example test with /usr/bin/module-deps
+  * Generate manpage using help2man
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 07 Dec 2020 11:40:00 +0100
+
+node-module-deps (6.2.2-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Use pkg-js-tools auto test & install
+  * Update copyright
+  * New upstream version 6.2.2
+  * Make build reproducible (Closes: #881262)
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 01 Mar 2020 12:58:36 +0100
+
+node-module-deps (6.2.1-1) unstable; urgency=medium
+
+  * New upstream version:
+    Add `.dirname` property to the object given to `opts.resolve`
+  * Bump debhelper and policy (no changes)
+  * Move to /usr/share
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 17 Sep 2019 00:18:26 +0200
+
+node-module-deps (6.1.0-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 22 May 2018 16:46:02 +0200
+
+node-module-deps (6.0.2-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump compat and policy
+  * Move to salsa
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 08 May 2018 00:32:59 +0200
+
+node-module-deps (4.1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #876091)
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 15 Sep 2017 22:01:25 +0200

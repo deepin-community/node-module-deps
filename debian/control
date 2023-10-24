@@ -1,15 +1,61 @@
-Source: template-repository
-Section: unknown
+Source: node-module-deps
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Bastien Roucariès <rouca@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , help2man
+ , node-browser-pack <!nocheck>
+ , node-browser-resolve <!nocheck>
+ , node-cached-path-relative <!nocheck>
+ , node-concat-stream <!nocheck>
+ , node-defined <!nocheck>
+ , node-detective <!nocheck>
+ , node-duplexer3 <!nocheck>
+ , node-inherits <!nocheck>
+ , node-jsonstream <!nocheck>
+ , node-parents <!nocheck>
+ , node-readable-stream <!nocheck>
+ , node-resolve <!nocheck>
+ , node-stream-combiner2 <!nocheck>
+ , node-subarg <!nocheck>
+ , node-tap <!nocheck>
+ , node-through2 <!nocheck>
+ , node-xtend <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-module-deps
+Vcs-Git: https://salsa.debian.org/js-team/node-module-deps.git
+Homepage: https://github.com/substack/module-deps
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: node-module-deps
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , node-browser-resolve
+ , node-cached-path-relative (>= 1.0.2)
+ , node-concat-stream
+ , node-defined
+ , node-detective
+ , node-duplexer3
+ , node-inherits
+ , node-jsonstream
+ , node-parents
+ , node-readable-stream
+ , node-resolve
+ , node-stream-combiner2
+ , node-subarg
+ , node-through2
+ , node-xtend
+ , nodejs:any
+Description: walk the dependency graph to generate json output for browser-pack
+ This modules creates a dependency graph allowing browserify to embed
+ all modules in a single object.
+ .
+ Browserify is a JavaScript tool that allows developers to write
+ Node.js-style  modules that compile for use in the browser
+ .
+ Node.js is an event-based server-side JavaScript engine.

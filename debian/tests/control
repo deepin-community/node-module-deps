@@ -1,0 +1,3 @@
+Tests: runexamples
+Depends: @, nodejs (>= 6), node-jsonstream
+Restrictions: allow-stderr, skippable

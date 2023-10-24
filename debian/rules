@@ -1,4 +1,31 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
 
 %:
 	dh $@
+
+override_dh_auto_build:
+	help2man --no-info ./bin/cmd.js >debian/module-deps.1
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod a+x debian/node-module-deps/usr/share/nodejs/module-deps/bin/cmd.js
+
+example/output.json: example/deps.js
+	node example/deps.js > example/output.json
+
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS) $(DEB_BUILD_PROFILES)))
+override_dh_installexamples: example/output.json
+	dh_installexamples
+	# patch example
+	find $(CURDIR)/debian/node-module-deps/usr/share/doc/node-module-deps/examples/ -name '*.js' -exec \
+		sed -i "s,require\s*[(]\s*'[.][.][^']*'\s*[)],require('module-deps'),g" {} \;
+	sed -i -e "s,$(CURDIR)/example/,/usr/share/doc/node-module-deps/examples/,g" \
+		$(CURDIR)/debian/node-module-deps/usr/share/doc/node-module-deps/examples/output.json
+
+else
+override_dh_installexamples:
+endif
